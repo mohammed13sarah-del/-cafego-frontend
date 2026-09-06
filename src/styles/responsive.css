@@ -1,0 +1,262 @@
+/* ─── Responsive — Lavender App ─────────────────────────────────────────────
+   breakpoints: 320 | 375 | 425 | 768 | 1024 | 1440 | 2560
+──────────────────────────────────────────────────────────────────────────── */
+
+/* ══ CafeMenu ════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 425px) {
+  .cm-hero        { padding: 16px 14px; }
+  .cm-hero-title  { font-size: 1.2rem; }
+  .cm-grid        { grid-template-columns: 1fr; padding: 0 12px; gap: 12px; }
+  .cm-controls    { padding: 0 12px; }
+  .cm-cats        { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .cm-grid { grid-template-columns: repeat(2, 1fr); padding: 0 16px; }
+}
+
+@media (min-width: 1024px) {
+  .cm-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1440px) {
+  .cm-grid { grid-template-columns: repeat(4, 1fr); max-width: 1400px; }
+}
+
+@media (min-width: 2560px) {
+  .cm-grid { grid-template-columns: repeat(5, 1fr); max-width: 2200px; }
+}
+
+/* ══ Cart ════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .cart-table-head { display: none !important; }
+  .cart-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    padding: 16px !important;
+  }
+  .cart-actions { width: 100% !important; }
+  .checkout-btn, .clear-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .cart-row { grid-template-columns: 1fr !important; }
+}
+
+/* ══ Checkout ════════════════════════════════════════════════════════════════ */
+/* (موجود بـ Checkout.css — ما نكرره هنا) */
+
+/* ══ Home ════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 425px) {
+  .home-hero        { padding: 18px 16px !important; }
+  .home-hero-title  { font-size: 18px !important; }
+  .home-stats       { gap: 8px !important; }
+  .home-grid        { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .home-filters     { overflow-x: auto; flex-wrap: nowrap !important; padding-bottom: 4px; }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .home-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+@media (min-width: 1024px) {
+  .home-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+@media (min-width: 1440px) {
+  .home-grid { grid-template-columns: repeat(4, 1fr) !important; }
+}
+
+@media (min-width: 2560px) {
+  .home-grid { grid-template-columns: repeat(5, 1fr) !important; }
+}
+
+/* ══ LandingPage ═════════════════════════════════════════════════════════════ */
+
+@media (max-width: 425px) {
+  .landing-nav        { padding: 0 16px !important; }
+  .landing-nav-actions .btn-outline { display: none !important; }
+  .landing-hero       { padding: 40px 16px !important; min-height: 70vh !important; }
+  .landing-hero-title { font-size: 32px !important; }
+  .landing-hero-btns  { flex-direction: column !important; align-items: center !important; }
+  .landing-hero-btns button { width: 100% !important; justify-content: center !important; }
+  .landing-steps      { grid-template-columns: 1fr !important; }
+  .landing-cafes      { grid-template-columns: 1fr !important; }
+  .landing-features   { grid-template-columns: 1fr !important; }
+  .landing-footer     { padding: 40px 16px 0 !important; }
+  .landing-footer-grid { flex-direction: column !important; gap: 24px !important; }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .landing-nav     { padding: 0 24px !important; }
+  .landing-cafes   { grid-template-columns: repeat(2, 1fr) !important; }
+  .landing-features { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+@media (min-width: 1440px) {
+  .landing-hero { padding: 80px 48px !important; }
+}
+
+/* ══ MyOrders ════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 425px) {
+  .orders-stat-grid  { grid-template-columns: repeat(3, 1fr) !important; gap: 8px !important; }
+  .orders-table-head { display: none !important; }
+  .order-row         { grid-template-columns: 36px 1fr auto 28px !important; }
+  .orders-filters    { overflow-x: auto; flex-wrap: nowrap !important; padding-bottom: 4px; }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .orders-stat-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+/* ══ CustomerProfile ═════════════════════════════════════════════════════════ */
+
+@media (max-width: 425px) {
+  .profile-page  { padding: 0 4px; }
+  .profile-stats { grid-template-columns: repeat(3, 1fr) !important; gap: 6px !important; }
+}
+
+@media (min-width: 768px) {
+  .profile-page { max-width: 560px !important; }
+}
+
+/* ══ MenuManager ═════════════════════════════════════════════════════════════ */
+
+@media (max-width: 425px) {
+  .menu-header      { flex-direction: column !important; align-items: flex-start !important; }
+  .menu-nav-cards   { flex-wrap: nowrap !important; overflow-x: auto !important; }
+  .menu-products-row { gap: 10px !important; }
+}
+
+@media (min-width: 1440px) {
+  .menu-products-row { flex-wrap: wrap !important; overflow-x: visible !important; }
+}
+
+/* ══ OrdersManager ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 425px) {
+  .orders-mgr-header  { flex-direction: column !important; align-items: flex-start !important; }
+  .orders-mgr-stats   { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
+  .orders-mgr-toolbar { flex-direction: column !important; }
+  .orders-mgr-tabs    { overflow-x: auto; flex-wrap: nowrap !important; width: 100%; }
+  .orders-mgr-grid    { grid-template-columns: 1fr !important; }
+}
+
+@media (min-width: 1024px) {
+  .orders-mgr-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+@media (min-width: 1440px) {
+  .orders-mgr-grid { grid-template-columns: repeat(4, 1fr) !important; }
+}
+
+/* ══ InventoryManager ════════════════════════════════════════════════════════ */
+
+@media (max-width: 425px) {
+  .inv-header  { flex-direction: column !important; align-items: flex-start !important; }
+  .inv-stats   { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
+  .inv-toolbar { flex-direction: column !important; }
+  .inv-grid    { grid-template-columns: 1fr !important; }
+}
+
+@media (min-width: 1024px) {
+  .inv-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+@media (min-width: 1440px) {
+  .inv-grid { grid-template-columns: repeat(4, 1fr) !important; }
+}
+
+/* ══ CafeOwnerProfile ════════════════════════════════════════════════════════ */
+
+@media (max-width: 425px) {
+  .owner-profile-page  { padding: 0 4px; }
+  .owner-profile-stats { grid-template-columns: repeat(3, 1fr) !important; gap: 6px !important; }
+}
+
+@media (min-width: 768px) {
+  .owner-profile-page { max-width: 560px !important; }
+}
+
+/* ══ AdminDashboard ══════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .admin-dash-header  { flex-direction: column !important; align-items: flex-start !important; }
+  .admin-dash-stats   { grid-template-columns: repeat(2, 1fr) !important; }
+  .admin-dash-reports { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 425px) {
+  .admin-dash-stats { grid-template-columns: 1fr !important; }
+}
+
+@media (min-width: 1440px) {
+  .admin-dash-stats { grid-template-columns: repeat(4, 1fr) !important; }
+}
+
+/* ══ AdminCafes ══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .admin-cafes-header  { flex-direction: column !important; align-items: flex-start !important; }
+  .admin-cafes-stats   { grid-template-columns: repeat(2, 1fr) !important; }
+  .admin-cafes-toolbar { flex-direction: column !important; }
+  .admin-cafes-filters { overflow-x: auto; flex-wrap: nowrap !important; }
+  .admin-cafes-tabs    { width: 100% !important; }
+}
+
+@media (max-width: 425px) {
+  .admin-cafes-stats { grid-template-columns: 1fr !important; }
+}
+
+/* ══ AdminSettings ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 425px) {
+  .admin-settings-page { padding: 0 4px; }
+  .admin-settings-page h2 { font-size: 18px !important; }
+}
+
+@media (min-width: 1024px) {
+  .admin-settings-page { max-width: 860px !important; }
+}
+
+/* ══ App.js — MainLayout ═════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  /* Header */
+  .app-header {
+    padding: 0 12px !important;
+    height: 56px !important;
+  }
+  .app-header-logo span,
+  .app-header-meta { display: none !important; }
+  .app-header-search { display: none !important; }
+
+  /* Main content */
+  .app-main { padding: 16px 12px !important; }
+
+  /* Footer */
+  .app-footer {
+    padding: 10px 12px !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    font-size: 11px !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .app-header { padding: 0 8px !important; height: 52px !important; }
+  .app-main   { padding: 12px 8px !important; }
+  .app-footer { padding: 8px !important; font-size: 10px !important; }
+}
+
+@media (min-width: 1440px) {
+  .app-main { padding: 36px 48px !important; }
+}
