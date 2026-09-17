@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // 1. الرابط الأساسي للباك إند (تأكد من البورت 5182 كما في ملف launchSettings)
-const API_BASE_URL = "http://mohammed13sarah-001-site1.itempurl.com/api";
+const API_BASE_URL = "https://mohammed13sarah-001-site1.itempurl.com/api";
 const api = axios.create({
     baseURL: API_BASE_URL,
 });
